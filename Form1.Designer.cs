@@ -110,6 +110,9 @@
             this.Commentscol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFolderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -168,7 +171,10 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addFolderToolStripMenuItem,
-            this.openDatabaseToolStripMenuItem});
+            this.openDatabaseToolStripMenuItem,
+            this.addFolderToolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -200,21 +206,21 @@
             // renameFileFromTagsToolStripMenuItem
             // 
             this.renameFileFromTagsToolStripMenuItem.Name = "renameFileFromTagsToolStripMenuItem";
-            this.renameFileFromTagsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.renameFileFromTagsToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.renameFileFromTagsToolStripMenuItem.Text = "Rename file from Tags";
             this.renameFileFromTagsToolStripMenuItem.Click += new System.EventHandler(this.renameFileFromTagsToolStripMenuItem_Click);
             // 
             // tagFromFilenameToolStripMenuItem
             // 
             this.tagFromFilenameToolStripMenuItem.Name = "tagFromFilenameToolStripMenuItem";
-            this.tagFromFilenameToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.tagFromFilenameToolStripMenuItem.Text = "Tag from Filename";
+            this.tagFromFilenameToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.tagFromFilenameToolStripMenuItem.Text = "Gernerate Tags from Filename";
             this.tagFromFilenameToolStripMenuItem.Click += new System.EventHandler(this.tagFromFilenameToolStripMenuItem_Click);
             // 
             // addImageToolStripMenuItem
             // 
             this.addImageToolStripMenuItem.Name = "addImageToolStripMenuItem";
-            this.addImageToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.addImageToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.addImageToolStripMenuItem.Text = "Add Image";
             this.addImageToolStripMenuItem.Click += new System.EventHandler(this.addImageToolStripMenuItem_Click);
             // 
@@ -940,6 +946,25 @@
             // 
             this.Commentscol.Text = "Comments";
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeToolStripMenuItem.Text = "&Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // addFolderToolStripMenuItem1
+            // 
+            this.addFolderToolStripMenuItem1.Name = "addFolderToolStripMenuItem1";
+            this.addFolderToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.addFolderToolStripMenuItem1.Text = "Add Folder";
+            this.addFolderToolStripMenuItem1.Click += new System.EventHandler(this.addFolderToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1067,6 +1092,9 @@
         private System.Windows.Forms.ToolStripMenuItem addImageToolStripMenuItem;
         private System.Windows.Forms.Button BTNsearchimage;
         private System.Windows.Forms.ToolStripButton BTNaddimage;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addFolderToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
     }
 }
 

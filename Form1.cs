@@ -119,28 +119,54 @@ namespace Ntag
 
         private void addFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var bworker = new BackgroundWorker();
+            //var bworker = new BackgroundWorker();
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 // Cursor.Current = Cursors.WaitCursor;
-                if (File.Exists(appPath + "\\trackxml.xml"))
-                    File.Delete(appPath + "\\trackxml.xml");
+                //if (File.Exists(appPath + "\\trackxml.xml"))
+               //     File.Delete(appPath + "\\trackxml.xml");
                 //var fprog = new FRMprog();
                 //fprog.Dir = folderBrowserDialog.SelectedPath;
                 //fprog.ShowDialog();
                 musicListStore.Items.Clear();
-                myopenfilename = folderBrowserDialog.SelectedPath; 
-                bworker.DoWork += new DoWorkEventHandler(openfolder);
-                bworker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(CompressionFinished);
-                bworker.WorkerReportsProgress = true;
-                bworker.WorkerSupportsCancellation = true;
-                Miscutils.SetDoubleBuffering(musicListStore, true);
-                bworker.RunWorkerAsync();
-                toolStripProgressBar.Value = 0;
+                Add_folder(folderBrowserDialog.SelectedPath);
+                //myopenfilename = folderBrowserDialog.SelectedPath; 
+                //bworker.DoWork += new DoWorkEventHandler(openfolder);
+                //bworker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(CompressionFinished);
+                //bworker.WorkerReportsProgress = true;
+                //bworker.WorkerSupportsCancellation = true;
+                //Miscutils.SetDoubleBuffering(musicListStore, true);
+                //bworker.RunWorkerAsync();
+                //toolStripProgressBar.Value = 0;
                 
               //  Cursor.Current = Cursors.Default;
             }
+        }
+
+        private void addFolderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+              Add_folder(folderBrowserDialog.SelectedPath);
+            }
+
+        }
+
+        private void Add_folder(string foldername)
+        {
+            var bworker = new BackgroundWorker();
+            if (File.Exists(appPath + "\\trackxml.xml"))
+                File.Delete(appPath + "\\trackxml.xml");
+            myopenfilename = foldername;
+            bworker.DoWork += new DoWorkEventHandler(openfolder);
+            bworker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(CompressionFinished);
+            bworker.WorkerReportsProgress = true;
+            bworker.WorkerSupportsCancellation = true;
+            Miscutils.SetDoubleBuffering(musicListStore, true);
+            bworker.RunWorkerAsync();
+            toolStripProgressBar.Value = 0;
+
         }
 
         private void BTNcopy_Click(object sender, EventArgs e)
@@ -891,5 +917,12 @@ namespace Ntag
             foreach (string filePath in filePaths)
                 File.Delete(filePath);
         }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
     }
 }
