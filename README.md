@@ -1,2 +1,2 @@
 # Ntag
-mp3 tagging program using IDsharp
+mp3 tagging program using IDsharp libary
