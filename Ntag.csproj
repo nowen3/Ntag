@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E2C9686-35F9-46FE-8AB8-ACE1BFD91888}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ntag</RootNamespace>
+    <AssemblyName>Ntag</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IdSharp.AudioInfo, Version=1.1.5298.27754, Culture=neutral, PublicKeyToken=12b31ba58084889a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IdSharp.AudioInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="IdSharp.Common, Version=1.1.5298.27753, Culture=neutral, PublicKeyToken=1c8ad57ae419ccff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IdSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IdSharp.Tagging, Version=1.1.5298.27753, Culture=neutral, PublicKeyToken=9218f8c7f40da032, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IdSharp.Tagging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buildargs.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMcopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMcopy.Designer.cs">
+      <DependentUpon>FRMcopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMImage.Designer.cs">
+      <DependentUpon>FRMImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMimagesearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMimagesearch.Designer.cs">
+      <DependentUpon>FRMimagesearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMrename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMrename.Designer.cs">
+      <DependentUpon>FRMrename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMretag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMretag.Designer.cs">
+      <DependentUpon>FRMretag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMtagfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMtagfile.Designer.cs">
+      <DependentUpon>FRMtagfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gnudbitems.cs" />
+    <Compile Include="Gnudbsearch.cs" />
+    <Compile Include="Miscutils.cs" />
+    <Compile Include="ParseTrack.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScanDir.cs" />
+    <Compile Include="Track.cs" />
+    <Compile Include="XMLutils.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMcopy.resx">
+      <DependentUpon>FRMcopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMImage.resx">
+      <DependentUpon>FRMImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMimagesearch.resx">
+      <DependentUpon>FRMimagesearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMrename.resx">
+      <DependentUpon>FRMrename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMretag.resx">
+      <DependentUpon>FRMretag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMtagfile.resx">
+      <DependentUpon>FRMtagfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
